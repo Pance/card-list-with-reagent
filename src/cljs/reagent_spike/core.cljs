@@ -22,6 +22,11 @@
 ;; -------------------------
 ;; Views
 
+(defn card-list-view [cards]
+  [:ul
+    (for [card cards]
+      ^{:key card} [:li card])])
+
 (defmulti page identity)
 
 (defmethod page :page1 [_]
