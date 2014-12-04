@@ -9,6 +9,10 @@
 ;; State
 (defonce app-state (atom {:text "Hello, this is: "}))
 
+(defonce card-list (atom ["Bile Blight"
+                          "Seeker of the Way"
+                          "Magma Jet"]))
+
 (defn get-state [k & [default]]
   (clojure.core/get @app-state k default))
 
