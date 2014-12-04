@@ -31,7 +31,9 @@
 
 (defmethod page :page1 [_]
   [:div [:h2 (get-state :text) "Page 1"]
-   [:div [:a {:href "#/page2"} "go to page 2"]]])
+   [:div [:a {:href "#/page2"} "go to page 2"]]
+   [:div [card-list-view @card-list]]]
+  )
 
 (defmethod page :page2 [_]
   [:div [:h2 (get-state :text) "Page 2"]
